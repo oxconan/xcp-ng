@@ -1,7 +1,7 @@
 variable "url" {
   type        = string
   description = "The url for logging in to XOA."
-  default = "ws://den-xoa-001.amperecomputing.com/"
+  default = "ws://42.115.65.60/"
 }
 variable "username" {
   type        = string
