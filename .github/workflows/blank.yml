@@ -22,8 +22,14 @@ jobs:
         run: terraform init
       - name: terraform apply
         env:
+          PASSWORD_FILE: ./variable-values.tfvars
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: terraform plan -var="password=$PASSWORD"
+        run: |
+          echo 'password = "${PASSWORD}"' > $PASSWORD_FILE
+      - name: Terraform Apply
+        run: |
+          terraform apply -var-file=$PASSWORD_FILE
+     
         
       #  uses: dflook/terraform-apply@v1
       # with:
