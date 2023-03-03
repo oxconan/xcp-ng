@@ -20,9 +20,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: terraform apply
-        env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
-        run: terraform plan "$SUPER_SECRET"
+        run: terraform plan -var "var.password"
         
       #  uses: dflook/terraform-apply@v1
       # with:
