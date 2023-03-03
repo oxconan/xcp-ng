@@ -12,7 +12,7 @@ variable "username" {
 variable "password" {
   type        = string
   description = "The password for logging in to XOA."
-                                                              ##default  = ### define password to terraform apply in Keeper
+  default     = ""                                                            ##default  = ### define password to terraform apply in Keeper
 }
 
 variable "hostname" {
