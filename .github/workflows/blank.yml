@@ -22,7 +22,7 @@ jobs:
       - name: terraform apply
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
-          run: terraform plan "$SUPER_SECRET"
+        run: terraform plan "$SUPER_SECRET"
         
       #  uses: dflook/terraform-apply@v1
       # with:
