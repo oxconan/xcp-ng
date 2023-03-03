@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
       - name: terraform init
         run: terraform init
-      - name: terraform apply
+      - name: Write var file
         env:
           PASSWORD_FILE: ./variable-values.tfvars
           PASSWORD: ${{ secrets.PASSWORD }}
