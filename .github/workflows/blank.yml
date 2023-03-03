@@ -23,7 +23,7 @@ jobs:
       - name: terraform apply
         env:
           PASSWORD: ${{ secrets.PASSWORD }}
-        run: terraform plan
+        run: terraform plan -var=$PASSWORD
         
       #  uses: dflook/terraform-apply@v1
       # with:
