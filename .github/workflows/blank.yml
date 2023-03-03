@@ -21,7 +21,9 @@ jobs:
       - name: terraform init
         run: terraform init
       - name: terraform apply
-        run: terraform plan -var "password=Ampere@2021"
+        env:
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: terraform plan -var "password=PASSWORD"
         
       #  uses: dflook/terraform-apply@v1
       # with:
