@@ -25,6 +25,7 @@ jobs:
           PASSWORD_FILE: ./variable-values.tfvars
           PASSWORD: ${{ secrets.PASSWORD }}
         run:
+          echo 'password = "${PASSWORD}"'
           echo 'password = "${PASSWORD}"' > $PASSWORD_FILE
       - name: Terraform Apply
         run:
