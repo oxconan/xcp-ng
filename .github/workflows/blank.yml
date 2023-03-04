@@ -27,7 +27,7 @@ jobs:
         run:
           echo 'password = "${PASSWORD}"'
           echo 'password = "${PASSWORD}"' > $PASSWORD_FILE
-      - name: Terraform Apply
+      - name: Terraform Plan
         run:
           #terraform apply -var-file=$PASSWORD_FILE
           terraform plan
