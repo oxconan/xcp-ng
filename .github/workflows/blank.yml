@@ -28,7 +28,8 @@ jobs:
           echo 'password = "${PASSWORD}"' > $PASSWORD_FILE
       - name: Terraform Apply
         run:
-          terraform apply -var-file=$PASSWORD_FILE
+          #terraform apply -var-file=$PASSWORD_FILE
+          terraform apply -input=true
      
         
       #  uses: dflook/terraform-apply@v1
