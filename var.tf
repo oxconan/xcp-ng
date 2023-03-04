@@ -18,7 +18,7 @@ variable "password" {
 variable "hostname" {
   type        = string
   description = "VM hostname"
-  default  = ""
+  default  = "Ampere@2021"
 }
 # variable "domain" {
 #   type        = string
