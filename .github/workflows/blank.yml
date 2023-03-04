@@ -30,7 +30,7 @@ jobs:
       - name: Terraform Apply
         run:
           #terraform apply -var-file=$PASSWORD_FILE
-          terraform apply -input=true
+          terraform plan
      
         
       #  uses: dflook/terraform-apply@v1
