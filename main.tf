@@ -6,16 +6,13 @@ terraform {
       version = "~> 0.9"
     }
   }
-}
  cloud {
     organization = "hml-lab-test"
     workspaces {
       name = "xcp-ng"
     }
   }
-
   required_version = ">= 1.1.0"
-
   required_providers {
     random = {
       source  = "hashicorp/random"
