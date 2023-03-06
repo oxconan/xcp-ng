@@ -7,6 +7,17 @@ terraform {
     }
   }
 }
+data "terraform_remote_state" "network" {
+  backend = "remote"
+
+  config = {
+    organization = var.tfc_xcp-ng
+    workspaces = {
+          name = var.tfc_network_xcp-ng
+    }
+  }
+}
+
 # Content of the terraform files
 data "xenorchestra_pool" "pool" {
     name_label = "IT"
