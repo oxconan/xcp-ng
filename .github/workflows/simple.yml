@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          terraform init
-          terraform plan
+          terraform init,
+          terraform plan.
