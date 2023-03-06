@@ -7,13 +7,19 @@ terraform {
     }
   }
 }
-data "terraform_remote_state" "network" {
-  backend = "remote"
+ cloud {
+    organization = "hml-lab-test"
+    workspaces {
+      name = "xcp-ng"
+    }
+  }
 
-  config = {
-    organization = var.tfc_xcp-ng
-    workspaces = {
-          name = var.tfc_network_xcp-ng
+  required_version = ">= 1.1.0"
+
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "3.3.2"
     }
   }
 }
