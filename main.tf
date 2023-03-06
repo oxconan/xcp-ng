@@ -6,20 +6,7 @@ terraform {
       version = "~> 0.9"
     }
   }
- cloud {
-    organization = "hml-lab-test"
-    workspaces {
-      name = "xcp-ng"
-    }
-  }
- # required_version = ">= 1.1.0"
-  required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = "3.3.2"
-    }
-  }
-}
+ }
 
 # Content of the terraform files
 data "xenorchestra_pool" "pool" {
