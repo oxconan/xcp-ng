@@ -6,7 +6,7 @@ terraform {
       version = "~> 0.9"
     }
   }
-  required_version = "1.2.0"
+  required_version = "~> 1.2.0"
  }
 
 # Content of the terraform files
